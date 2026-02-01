@@ -28,7 +28,9 @@ export default function IndiaMap3D({ onStateHover, hoveredState }) {
   useEffect(() => {
     const fetchMap = async () => {
       try {
-        const response = await fetch('https://raw.githubusercontent.com/simplemaps/svg-maps/master/countries/in/in.svg');
+     const response = await fetch(
+  'https://unpkg.com/@svg-maps/india@1.0.1/india.svg'
+); 
         if (!response.ok) throw new Error('Failed to fetch map data');
 
         const text = await response.text();
